@@ -355,6 +355,81 @@
       .facility-card {
         flex: 0 0 260px;
       }
+      /* Add to existing nav styles */
+nav {
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+.logo {
+  flex: 1 1 auto; /* keeps logo aligned left on small screens */
+}
+
+.nav-links {
+  flex: 1 1 auto; /* allows nav links to fill space */
+  justify-content: flex-end; /* aligns nav links right */
+  flex-wrap: wrap; /* allows items to wrap on smaller screens */
+}
+
+.nav-links a {
+  white-space: nowrap; /* prevents link text from breaking */
+}
+
+/* Add at bottom of CSS for mobile specific adjustments */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.4rem; /* smaller hero heading on small screens */
+  }
+  .hero p {
+    font-size: 1.1rem; /* smaller hero paragraph */
+    max-width: 90%; /* reduce width for better fit */
+    margin-bottom: 30px;
+  }
+  .hero a.button {
+    padding: 12px 30px; /* smaller button */
+    font-size: 1rem;
+  }
+  
+  .why-choose {
+    padding: 25px 20px;
+  }
+  
+  .why-list {
+    grid-template-columns: 1fr; /* single column list on mobile */
+    gap: 15px;
+    font-size: 1rem;
+  }
+  
+  .facilities-carousel {
+    flex-wrap: nowrap; /* keep horizontal scroll */
+    gap: 20px;
+  }
+  
+  .facility-card {
+    flex: 0 0 260px; /* slightly narrower cards */
+    scroll-snap-align: start;
+  }
+  
+  .facilities-section h2 {
+    font-size: 1.8rem; /* smaller section title */
+  }
+}
+
+/* Optional: add horizontal scroll styles for the facilities carousel */
+.facilities-carousel {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #0066cc55 transparent;
+}
+
+.facilities-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.facilities-carousel::-webkit-scrollbar-thumb {
+  background-color: #0066cc55;
+  border-radius: 3px;
+}
     }
   </style>
 </head>
