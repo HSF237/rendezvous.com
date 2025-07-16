@@ -1,0 +1,331 @@
+<!-- Save as contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - RENDEZVOUS Badminton Academy (RBA)</title>
+  <style>
+    /* Reset and base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #fafafa;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      color: #004999;
+      outline: none;
+      text-decoration: underline;
+    }
+
+    /* Container */
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px 20px 60px 20px;
+      flex-grow: 1;
+    }
+
+    /* Header & Nav */
+    header {
+      background-color: #004999;
+      padding: 15px 20px;
+      color: #fff;
+      box-shadow: 0 2px 6px #00499950;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.7rem;
+      letter-spacing: 2px;
+      user-select: none;
+      cursor: default;
+      font-family: 'Georgia', serif;
+      flex: 1 1 auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      flex: 1 1 auto;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 6px 10px;
+      border-radius: 4px;
+      background-color: transparent;
+      border: 2px solid transparent;
+      transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+      background-color: #003366;
+      color: #fff;
+      border-color: #0066cc;
+      outline-offset: 2px;
+    }
+
+    .nav-links a.active {
+      background-color: #0066cc;
+      color: #fff;
+      border-color: #004999;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    /* Contact Page */
+    .contact-section {
+      background-color: #fff;
+      box-shadow: 0 3px 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      padding: 40px 30px;
+      margin-top: 40px;
+    }
+
+    .contact-section h2 {
+      font-family: 'Georgia', serif;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      font-weight: 700;
+      color: #00264d;
+      border-bottom: 3px solid #0066cc;
+      padding-bottom: 10px;
+      letter-spacing: 1.2px;
+      user-select: none;
+    }
+
+    form label {
+      font-weight: 600;
+      color: #004999;
+      margin-bottom: 6px;
+      display: block;
+      font-size: 1rem;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px 14px;
+      margin-bottom: 20px;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #222;
+      transition: border-color 0.3s ease;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      resize: vertical;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: #0066cc;
+      outline: none;
+      box-shadow: 0 0 8px #80aaffcc;
+    }
+
+    .submit-btn {
+      background-color: #004999;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 14px;
+      cursor: pointer;
+      border: none;
+      border-radius: 30px;
+      width: 100%;
+      user-select: none;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .submit-btn:hover,
+    .submit-btn:focus {
+      background-color: #003366;
+      box-shadow: 0 8px 25px rgba(0, 51, 102, 0.5);
+      outline-offset: 4px;
+      outline: 3px solid #acc8ff;
+    }
+
+    #formResponse {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #004999;
+      color: #d6e4ff;
+      text-align: center;
+      padding: 18px 10px;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 6px #00336699;
+      user-select: none;
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      nav {
+        flex-wrap: wrap;
+      }
+      .nav-links {
+        flex: 1 1 100%;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container" aria-label="Primary navigation">
+      <div class="logo" aria-label="RENDEZVOUS Badminton Academy Logo">RBA</div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="achievements.html" class="nav-link">Achievements</a>
+        <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" tabindex="-1" id="main-content">
+    <section class="contact-section" role="main" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact Us</h2>
+      <form id="contactForm" aria-describedby="formDesc" novalidate>
+        <label for="nameInput">Name</label>
+        <input
+          type="text"
+          id="nameInput"
+          name="name"
+          placeholder="Your full name"
+          required
+          aria-required="true"
+          minlength="2"
+          autocomplete="name"
+        />
+
+        <label for="emailInput">Email</label>
+        <input
+          type="email"
+          id="emailInput"
+          name="email"
+          placeholder="you@example.com"
+          required
+          aria-required="true"
+          autocomplete="email"
+        />
+
+        <label for="messageInput">Message</label>
+        <textarea
+          id="messageInput"
+          name="message"
+          rows="5"
+          placeholder="Your message or query"
+          required
+          aria-required="true"
+          minlength="10"
+        ></textarea>
+
+        <button type="submit" class="submit-btn" aria-label="Submit contact form">
+          Send Message
+        </button>
+
+        <p id="formDesc" style="font-size: 0; height: 1px; overflow:hidden;">
+          Contact form for RENDEZVOUS Badminton Academy inquiries.
+        </p>
+      </form>
+      <p id="formResponse" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2010 - 2024 RENDEZVOUS Badminton Academy. All Rights Reserved.
+  </footer>
+
+  <script>
+    // Contact form validation and feedback
+    const contactForm = document.getElementById('contactForm');
+    const formResponse = document.getElementById('formResponse');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = contactForm.name.value.trim();
+      const email = contactForm.email.value.trim();
+      const message = contactForm.message.value.trim();
+
+      if (name.length < 2) {
+        showFeedback('Please enter a valid name (at least 2 characters).', false);
+        contactForm.name.focus();
+        return;
+      }
+      if (!validateEmail(email)) {
+        showFeedback('Please enter a valid email address.', false);
+        contactForm.email.focus();
+        return;
+      }
+      if (message.length < 10) {
+        showFeedback('Message should be at least 10 characters long.', false);
+        contactForm.message.focus();
+        return;
+      }
+
+      showFeedback('Sending your message...', true);
+
+      setTimeout(() => {
+        showFeedback(`Thank you, ${name}! Your message has been received. We'll get back to you soon.`, true);
+        contactForm.reset();
+      }, 1500);
+    });
+
+    function showFeedback(message, success) {
+      formResponse.textContent = message;
+      formResponse.style.color = success ? '#008000' : '#b22222';
+    }
+
+    function validateEmail(email) {
+      // Basic email regex
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email.toLowerCase());
+    }
+  </script>
+</body>
+</html>
