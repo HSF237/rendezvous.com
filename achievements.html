@@ -1,0 +1,289 @@
+<!-- Save as achievements.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Achievements - RENDEZVOUS Badminton Academy (RBA)</title>
+  <style>
+    /* Reset and base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #fafafa;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      color: #004999;
+      outline: none;
+      text-decoration: underline;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 20px 60px 20px;
+      flex-grow: 1;
+    }
+
+    /* Header & Nav */
+    header {
+      background-color: #004999;
+      padding: 15px 20px;
+      color: #fff;
+      box-shadow: 0 2px 6px #00499950;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.7rem;
+      letter-spacing: 2px;
+      user-select: none;
+      cursor: default;
+      font-family: 'Georgia', serif;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 6px 10px;
+      border-radius: 4px;
+      background-color: transparent;
+      border: 2px solid transparent;
+      transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+      background-color: #003366;
+      color: #fff;
+      border-color: #0066cc;
+      outline-offset: 2px;
+    }
+
+    .nav-links a.active {
+      background-color: #0066cc;
+      color: #fff;
+      border-color: #004999;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    /* Achievements Page */
+    .achievements-section {
+      max-width: 1000px;
+      margin: 40px auto 80px auto;
+      padding: 0 10px;
+    }
+
+    h1.section-title {
+      font-family: 'Georgia', serif;
+      font-size: 2.25rem;
+      color: #00264d;
+      margin-bottom: 30px;
+      font-weight: 700;
+      border-bottom: 3px solid #0066cc;
+      padding-bottom: 8px;
+      letter-spacing: 1.5px;
+    }
+
+    .achievements-list {
+      display: grid;
+      gap: 25px;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .achievement-item {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      cursor: default;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .achievement-item:hover,
+    .achievement-item:focus-within {
+      box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+      transform: translateY(-5px);
+      outline-offset: 3px;
+      outline: 3px solid #acc8ff;
+    }
+
+    .achievement-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .achievement-content {
+      padding: 15px 18px;
+    }
+
+    .achievement-title {
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+      color: #004999;
+    }
+
+    .achievement-desc {
+      font-size: 0.95rem;
+      color: #555;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004999;
+      color: #d6e4ff;
+      text-align: center;
+      padding: 18px 10px;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 6px #00336699;
+      user-select: none;
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      nav {
+        flex-wrap: wrap;
+      }
+      .nav-links {
+        flex: 1 1 100%;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container" aria-label="Primary navigation">
+      <div class="logo" aria-label="RENDEZVOUS Badminton Academy Logo">RBA</div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="achievements.html" class="nav-link active" aria-current="page">Achievements</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" tabindex="-1" id="main-content">
+    <section class="achievements-section" role="main" aria-labelledby="achievements-title">
+      <h1 id="achievements-title" class="section-title">Our Achievements</h1>
+      <div class="achievements-list">
+        <article class="achievement-item" tabindex="0" aria-label="National Championship Winner 2023">
+          <img
+            class="achievement-image"
+            src="https://images.unsplash.com/photo-1601987851605-c9cc4fd68f3c?auto=format&fit=crop&w=600&q=50"
+            alt="Player lifting trophy"
+            width="300"
+            height="180"
+            loading="lazy"
+          />
+          <div class="achievement-content">
+            <h3 class="achievement-title">National Championship Winner 2023</h3>
+            <p class="achievement-desc">
+              Our academy player won the prestigious National Badminton Championship in 2023.
+            </p>
+          </div>
+        </article>
+        <article class="achievement-item" tabindex="0" aria-label="100 plus medals in state tournaments">
+          <img
+            class="achievement-image"
+            src="https://images.unsplash.com/photo-1533025785209-ebe12b7e4b49?auto=format&fit=crop&w=600&q=50"
+            alt="Medals and certificates"
+            width="300"
+            height="180"
+            loading="lazy"
+          />
+          <div class="achievement-content">
+            <h3 class="achievement-title">100+ Medals in State Tournaments</h3>
+            <p class="achievement-desc">
+              Accumulated over 100 medals from state-level events within just 5 years.
+            </p>
+          </div>
+        </article>
+        <article class="achievement-item" tabindex="0" aria-label="Top ranked coaching team achievement">
+          <img
+            class="achievement-image"
+            src="https://images.unsplash.com/photo-1570476811233-0d1fff683988?auto=format&fit=crop&w=600&q=50"
+            alt="Badminton training session"
+            width="300"
+            height="180"
+            loading="lazy"
+          />
+          <div class="achievement-content">
+            <h3 class="achievement-title">Top Ranked Coaching Team</h3>
+            <p class="achievement-desc">
+              Certified coaches with international training certifications guide every player to excel.
+            </p>
+          </div>
+        </article>
+        <article class="achievement-item" tabindex="0" aria-label="Youth championship finalists achievement">
+          <img
+            class="achievement-image"
+            src="https://images.unsplash.com/photo-1568040244248-2a59e866505e?auto=format&fit=crop&w=600&q=50"
+            alt="Youth badminton competition"
+            width="300"
+            height="180"
+            loading="lazy"
+          />
+          <div class="achievement-content">
+            <h3 class="achievement-title">Youth Championship Finalists</h3>
+            <p class="achievement-desc">
+              Multiple finalists in youth championships across the country.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2010 - 2024 RENDEZVOUS Badminton Academy. All Rights Reserved.
+  </footer>
+</body>
+</html>

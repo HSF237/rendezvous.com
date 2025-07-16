@@ -1,0 +1,231 @@
+<!-- Save as about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - RENDEZVOUS Badminton Academy (RBA)</title>
+  <style>
+    /* Reset and base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #fafafa;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      color: #004999;
+      outline: none;
+      text-decoration: underline;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 20px 60px 20px;
+      flex-grow: 1;
+    }
+
+    /* Header & Nav */
+    header {
+      background-color: #004999;
+      padding: 15px 20px;
+      color: #fff;
+      box-shadow: 0 2px 6px #00499950;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.7rem;
+      letter-spacing: 2px;
+      user-select: none;
+      cursor: default;
+      font-family: 'Georgia', serif;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 6px 10px;
+      border-radius: 4px;
+      background-color: transparent;
+      border: 2px solid transparent;
+      transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+      background-color: #003366;
+      color: #fff;
+      border-color: #0066cc;
+      outline-offset: 2px;
+    }
+
+    .nav-links a.active {
+      background-color: #0066cc;
+      color: #fff;
+      border-color: #004999;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    /* About Page */
+    .about-content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 6px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1 1 400px;
+      color: #444;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .about-text strong {
+      color: #004999;
+    }
+
+    .about-image {
+      flex: 1 1 400px;
+      text-align: center;
+      max-width: 400px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.4s ease;
+      cursor: default;
+      box-shadow: 0 8px 18px rgba(0, 73, 153, 0.2);
+    }
+
+    .about-image img:hover,
+    .about-image img:focus {
+      transform: scale(1.05) rotate(1.5deg);
+      box-shadow: 0 12px 25px rgba(0, 73, 153, 0.35);
+      outline-offset: 4px;
+      outline: 3px solid #acc8ff;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004999;
+      color: #d6e4ff;
+      text-align: center;
+      padding: 18px 10px;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 6px #00336699;
+      user-select: none;
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      nav {
+        flex-wrap: wrap;
+      }
+      .nav-links {
+        flex: 1 1 100%;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 1rem;
+      }
+      .about-content {
+        flex-direction: column;
+      }
+      .about-image, .about-text {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container" aria-label="Primary navigation">
+      <div class="logo" aria-label="RENDEZVOUS Badminton Academy Logo">RBA</div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active" aria-current="page">About</a>
+        <a href="achievements.html" class="nav-link">Achievements</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" tabindex="-1" id="main-content">
+    <article class="about-content" role="main">
+      <section class="about-text">
+        <h1>About RENDEZVOUS Badminton Academy</h1>
+        <p>
+          RENDEZVOUS Badminton Academy is dedicated to nurturing young badminton enthusiasts into world-class players.
+          Established in 2010, we provide professional coaching, rigorous training programs, and state-of-the-art facilities to players of all levels.
+        </p>
+        <p>
+          Our mission is to blend <strong>discipline</strong>, <strong>technique</strong>, and <strong>passion</strong> to develop champions both on and off the court.
+          Our experienced coaching staff are committed to every student's success, helping players build physical fitness, tactical knowledge, and mental toughness.
+        </p>
+        <p>
+          Join RBA to become part of a supportive and competitive community that values personal growth and athletic excellence.
+        </p>
+      </section>
+      <section class="about-image" aria-label="Badminton player in action photo">
+        <img
+          src="https://images.unsplash.com/photo-1526403221482-ec4477f2d051?auto=format&fit=crop&w=800&q=80"
+          alt="Badminton player in action"
+          loading="lazy"
+          width="400" height="300"
+          tabindex="0"
+        />
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    &copy; 2010 - 2024 RENDEZVOUS Badminton Academy. All Rights Reserved.
+  </footer>
+</body>
+</html>
