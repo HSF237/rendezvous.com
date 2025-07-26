@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us - Rendezvous Badminton Academy</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <h1 class="header__logo"><a href="index.html">Rendezvous Badminton Academy</a></h1>
+            <nav class="nav" aria-label="Primary Navigation">
+                <button class="nav__toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle menu">
+                    <span class="nav__hamburger"></span>
+                </button>
+                <ul class="nav__list" id="primary-navigation">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="about.html" class="nav__link nav__link--active">About</a></li>
+                    <li><a href="achievements.html" class="nav__link">achievements</a></li>
+                    <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero" aria-label="About Hero Section">
+            <div class="container about-hero__container">
+                <h2 class="section-title about-hero__title">About Rendezvous Badminton Academy</h2>
+                <p class="about-hero__subtitle">
+                    Established in 2010, we are committed to nurturing badminton talent from beginners to professionals.
+                </p>
+                <img src="images/about-badminton.jpg" alt="Players practicing badminton" loading="lazy" class="about-hero__image"/>
+            </div>
+        </section>
+
+        <section class="history" aria-label="History Section">
+            <div class="container history__container">
+                <h3 class="section-subtitle">Our Journey</h3>
+                <p>
+                    Over the past decade, Rendezvous Badminton Academy has grown to become one of the
+                    premier badminton coaching centres in the region. We have trained over 1000 students,
+                    many of whom have gone on to compete at national and international levels.
+                </p>
+                <p>
+                    Our vision is to create champions by imparting top-notch coaching, modern training methods
+                    and fostering sportsmanship.
+                </p>
+            </div>
+        </section>
+
+        <section class="team" aria-label="Coaching Team">
+            <div class="container team__container">
+                <h3 class="section-subtitle">Meet Our Coaches</h3>
+                <div class="team__grid">
+                    <article class="team-member">
+                        <img src="images/coach1.jpg" alt="Coach Rohit Singh" class="team-member__photo" loading="lazy"/>
+                        <h4 class="team-member__name">Rohit Singh</h4>
+                        <p class="team-member__role">Head Coach</p>
+                        <p>Certified Level 3 coach with 15+ years experience and former national player.</p>
+                    </article>
+                    <article class="team-member">
+                        <img src="images/coach2.jpg" alt="Coach Ananya Rao" class="team-member__photo" loading="lazy"/>
+                        <h4 class="team-member__name">Ananya Rao</h4>
+                        <p class="team-member__role">Fitness Trainer</p>
+                        <p>Expert in badminton-specific fitness and injury prevention programs.</p>
+                    </article>
+                    <article class="team-member">
+                        <img src="images/coach3.jpg" alt="Coach Sameer Patel" class="team-member__photo" loading="lazy"/>
+                        <h4 class="team-member__name">Sameer Patel</h4>
+                        <p class="team-member__role">Junior Coach</p>
+                        <p>Passionate about training young talent and beginner skill development.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>&copy; 2024 Rendezvous Badminton Academy. All rights reserved.</p>
+            <ul class="footer__social">
+                <li><a href="#" aria-label="Facebook" class="footer__social-link">Fb</a></li>
+                <li><a href="#" aria-label="Instagram" class="footer__social-link">Ig</a></li>
+                <li><a href="#" aria-label="Twitter" class="footer__social-link">Tw</a></li>
+                <li><a href="#" aria-label="YouTube" class="footer__social-link">Yt</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
