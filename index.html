@@ -8,6 +8,18 @@
     <script defer src="main.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="shuttlecock-loader"></div>
+        <p class="loading-text">Preparing Your Experience...</p>
+    </div>
+
+    <!-- Floating Particles Background -->
+    <div class="particles-container"></div>
+
+    <!-- Cursor Trail Effect -->
+    <div class="cursor-trail"></div>
+
     <header class="header">
         <div class="container header__container">
             <h1 class="header__logo"><a href="index.html">Rendezvous Badminton Academy</a></h1>
@@ -18,7 +30,7 @@
                 <ul class="nav__list" id="primary-navigation">
                     <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
                     <li><a href="about.html" class="nav__link">About</a></li>
-                    <li><a href="achievements.html" class="nav__link">achievements</a></li>
+                    <li><a href="achievements.html" class="nav__link">Achievements</a></li>
                     <li><a href="gallery.html" class="nav__link">Gallery</a></li>
                     <li><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
@@ -28,39 +40,52 @@
 
     <main>
         <section class="hero" aria-label="Hero Section">
+            <div class="hero__particles"></div>
             <div class="container hero__container">
                 <div class="hero__content">
-                    <h2 class="hero__title">Welcome to Rendezvous Badminton Academy</h2>
-                    <p class="hero__subtitle">Elevate your game with professional coaching and advanced training.</p>
-                    <a href="programs.html" class="btn btn--primary">Explore Programs</a>
+                    <h2 class="hero__title typing-effect">Welcome to Rendezvous</h2>
+                    <p class="hero__subtitle fade-in">Elevate your game with professional coaching and advanced training.</p>
+                    <a href="about.html" class="btn btn--primary pulse-animation">Explore Programs</a>
                 </div>
                 <div class="hero__image">
                     <img src="https://t3.ftcdn.net/jpg/02/01/90/26/360_F_201902639_gZhcd695qjLUnVtJPXqlWpxNj5TvVHw2.jpg" alt="Badminton player in action" loading="lazy" />
                 </div>
             </div>
+            <!-- Floating Shuttlecock Elements -->
+            <div class="floating-shuttlecock"></div>
+            <div class="floating-shuttlecock"></div>
+            <div class="floating-shuttlecock"></div>
         </section>
 
         <section class="features" aria-label="Features Section">
             <div class="container features__container">
-                <h2 class="section-title">Why Choose Us?</h2>
+                <h2 class="section-title slide-in">Why Choose Us?</h2>
                 <div class="features__grid">
-                    <article class="feature">
-                        <img src="images/coach.svg" alt="" aria-hidden="true" class="feature__icon" />
+                    <article class="feature feature-1">
+                        <div class="feature__icon-wrapper">
+                            <img src="images/coach.svg" alt="" aria-hidden="true" class="feature__icon" />
+                        </div>
                         <h3 class="feature__title">Expert Coaches</h3>
                         <p>Certified trainers with years of experience dedicated to improving your skills.</p>
                     </article>
-                    <article class="feature">
-                        <img src="images/training.svg" alt="" aria-hidden="true" class="feature__icon" />
+                    <article class="feature feature-2">
+                        <div class="feature__icon-wrapper">
+                            <img src="images/training.svg" alt="" aria-hidden="true" class="feature__icon" />
+                        </div>
                         <h3 class="feature__title">Advanced Training</h3>
                         <p>Cutting-edge training techniques and fitness programs tailored for badminton.</p>
                     </article>
-                    <article class="feature">
-                        <img src="images/facility.svg" alt="" aria-hidden="true" class="feature__icon" />
+                    <article class="feature feature-3">
+                        <div class="feature__icon-wrapper">
+                            <img src="images/facility.svg" alt="" aria-hidden="true" class="feature__icon" />
+                        </div>
                         <h3 class="feature__title">Modern Facilities</h3>
                         <p>State-of-the-art courts and equipment for an optimal training experience.</p>
                     </article>
-                    <article class="feature">
-                        <img src="images/community.svg" alt="" aria-hidden="true" class="feature__icon" />
+                    <article class="feature feature-4">
+                        <div class="feature__icon-wrapper">
+                            <img src="images/community.svg" alt="" aria-hidden="true" class="feature__icon" />
+                        </div>
                         <h3 class="feature__title">Friendly Community</h3>
                         <p>A supportive environment to learn, compete, and grow with fellow players.</p>
                     </article>
@@ -70,24 +95,55 @@
 
         <section class="testimonials" aria-label="Testimonials Section">
             <div class="container testimonials__container">
-                <h2 class="section-title">What Our Students Say</h2>
+                <h2 class="section-title slide-in">What Our Students Say</h2>
                 <div class="testimonials__grid">
-                    <blockquote class="testimonial">
+                    <blockquote class="testimonial testimonial-1">
                         <p>"Joining Rendezvous transformed my game completely. The coaches are amazing!"</p>
                         <footer>- Priya Sharma</footer>
                     </blockquote>
-                    <blockquote class="testimonial">
+                    <blockquote class="testimonial testimonial-2">
                         <p>"The best training facility and friendly environment for all ages."</p>
                         <footer>- Rahul Verma</footer>
                     </blockquote>
-                    <blockquote class="testimonial">
+                    <blockquote class="testimonial testimonial-3">
                         <p>"I improved my fitness and techniques faster than I expected."</p>
                         <footer>- Anjali Mehta</footer>
                     </blockquote>
                 </div>
             </div>
         </section>
+
+        <section class="stats" aria-label="Statistics Section">
+            <div class="container stats__container">
+                <h2 class="section-title slide-in">Our Success by Numbers</h2>
+                <div class="stats__grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="1000">0</div>
+                        <div class="stat-label">Students Trained</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="25">0</div>
+                        <div class="stat-label">National Medals</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-label">International Players</div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </div>
 
     <footer class="footer">
         <div class="container footer__container">
