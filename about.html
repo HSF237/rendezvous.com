@@ -8,6 +8,18 @@
     <script defer src="main.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="shuttlecock-loader"></div>
+        <p class="loading-text">Preparing Your Experience...</p>
+    </div>
+
+    <!-- Floating Particles Background -->
+    <div class="particles-container"></div>
+
+    <!-- Cursor Trail Effect -->
+    <div class="cursor-trail"></div>
+
     <header class="header">
         <div class="container header__container">
             <h1 class="header__logo"><a href="index.html">Rendezvous Badminton Academy</a></h1>
@@ -18,7 +30,7 @@
                 <ul class="nav__list" id="primary-navigation">
                     <li><a href="index.html" class="nav__link">Home</a></li>
                     <li><a href="about.html" class="nav__link nav__link--active">About</a></li>
-                    <li><a href="achievements.html" class="nav__link">achievements</a></li>
+                    <li><a href="achievements.html" class="nav__link">Achievements</a></li>
                     <li><a href="gallery.html" class="nav__link">Gallery</a></li>
                     <li><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
@@ -29,47 +41,93 @@
     <main>
         <section class="about-hero" aria-label="About Hero Section">
             <div class="container about-hero__container">
-                <h2 class="section-title about-hero__title">About Rendezvous Badminton Academy</h2>
-                <p class="about-hero__subtitle">
+                <h2 class="section-title about-hero__title fade-in">About Rendezvous Badminton Academy</h2>
+                <p class="about-hero__subtitle fade-in">
                     Established in 2010, we are committed to nurturing badminton talent from beginners to professionals.
                 </p>
-                <img src="images/about-badminton.jpg" alt="Players practicing badminton" loading="lazy" class="about-hero__image"/>
+                <img src="images/about-badminton.jpg" alt="Players practicing badminton" loading="lazy" class="about-hero__image slide-in"/>
             </div>
         </section>
 
         <section class="history" aria-label="History Section">
             <div class="container history__container">
-                <h3 class="section-subtitle">Our Journey</h3>
-                <p>
-                    Over the past decade, Rendezvous Badminton Academy has grown to become one of the
-                    premier badminton coaching centres in the region. We have trained over 1000 students,
-                    many of whom have gone on to compete at national and international levels.
-                </p>
-                <p>
-                    Our vision is to create champions by imparting top-notch coaching, modern training methods
-                    and fostering sportsmanship.
-                </p>
+                <h3 class="section-subtitle slide-in">Our Journey</h3>
+                <div class="history-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2010</div>
+                        <div class="timeline-content">
+                            <h4>Academy Founded</h4>
+                            <p>Rendezvous Badminton Academy was established with a vision to nurture badminton talent.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2015</div>
+                        <div class="timeline-content">
+                            <h4>First International Player</h4>
+                            <p>Our first player represented India at the international level, marking a significant milestone.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-content">
+                            <h4>New Facility Expansion</h4>
+                            <p>Expanded our facilities with 8 international standard courts and modern training equipment.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-content">
+                            <h4>Best Coaching Academy Award</h4>
+                            <p>Received the prestigious "Best Coaching Academy" award for excellence in training.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">
+                            <h4>National Champions</h4>
+                            <p>Our elite players secured first place in the National Badminton Championship.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="team" aria-label="Coaching Team">
             <div class="container team__container">
-                <h3 class="section-subtitle">Meet Our Coaches</h3>
+                <h3 class="section-subtitle slide-in">Meet Our Coaches</h3>
                 <div class="team__grid">
-                    <article class="team-member">
-                        <img src="images/coach1.jpg" alt="Coach Rohit Singh" class="team-member__photo" loading="lazy"/>
+                    <article class="team-member team-member-1">
+                        <div class="team-member__photo-wrapper">
+                            <img src="images/coach1.jpg" alt="Coach Rohit Singh" class="team-member__photo" loading="lazy"/>
+                            <div class="team-member__social">
+                                <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                                <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                            </div>
+                        </div>
                         <h4 class="team-member__name">Rohit Singh</h4>
                         <p class="team-member__role">Head Coach</p>
                         <p>Certified Level 3 coach with 15+ years experience and former national player.</p>
                     </article>
-                    <article class="team-member">
-                        <img src="images/coach2.jpg" alt="Coach Ananya Rao" class="team-member__photo" loading="lazy"/>
+                    <article class="team-member team-member-2">
+                        <div class="team-member__photo-wrapper">
+                            <img src="images/coach2.jpg" alt="Coach Ananya Rao" class="team-member__photo" loading="lazy"/>
+                            <div class="team-member__social">
+                                <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                                <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                            </div>
+                        </div>
                         <h4 class="team-member__name">Ananya Rao</h4>
                         <p class="team-member__role">Fitness Trainer</p>
                         <p>Expert in badminton-specific fitness and injury prevention programs.</p>
                     </article>
-                    <article class="team-member">
-                        <img src="images/coach3.jpg" alt="Coach Sameer Patel" class="team-member__photo" loading="lazy"/>
+                    <article class="team-member team-member-3">
+                        <div class="team-member__photo-wrapper">
+                            <img src="images/coach3.jpg" alt="Coach Sameer Patel" class="team-member__photo" loading="lazy"/>
+                            <div class="team-member__social">
+                                <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                                <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                            </div>
+                        </div>
                         <h4 class="team-member__name">Sameer Patel</h4>
                         <p class="team-member__role">Junior Coach</p>
                         <p>Passionate about training young talent and beginner skill development.</p>
@@ -78,6 +136,13 @@
             </div>
         </section>
     </main>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </div>
 
     <footer class="footer">
         <div class="container footer__container">
