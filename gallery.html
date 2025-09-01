@@ -8,6 +8,18 @@
     <script defer src="main.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="shuttlecock-loader"></div>
+        <p class="loading-text">Preparing Your Experience...</p>
+    </div>
+
+    <!-- Floating Particles Background -->
+    <div class="particles-container"></div>
+
+    <!-- Cursor Trail Effect -->
+    <div class="cursor-trail"></div>
+
     <header class="header">
         <div class="container header__container">
             <h1 class="header__logo"><a href="index.html">Rendezvous Badminton Academy</a></h1>
@@ -18,7 +30,7 @@
                 <ul class="nav__list" id="primary-navigation">
                     <li><a href="index.html" class="nav__link">Home</a></li>
                     <li><a href="about.html" class="nav__link">About</a></li>
-                    <li><a href="achievements.html" class="nav__link">achievements</a></li>
+                    <li><a href="achievements.html" class="nav__link">Achievements</a></li>
                     <li><a href="gallery.html" class="nav__link nav__link--active">Gallery</a></li>
                     <li><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
@@ -29,38 +41,84 @@
     <main>
         <section class="gallery-section" aria-label="Gallery Section">
             <div class="container gallery__container">
-                <h2 class="section-title">Gallery</h2>
-                <p>Explore photos from our academy, matches, and training sessions.</p>
+                <h2 class="section-title fade-in">Gallery</h2>
+                <p class="fade-in">Explore photos from our academy, matches, and training sessions.</p>
+                
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="matches">Matches</button>
+                    <button class="filter-btn" data-filter="training">Training</button>
+                    <button class="filter-btn" data-filter="facilities">Facilities</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
+                </div>
+                
                 <div class="gallery-grid">
-                    <figure class="gallery-item">
+                    <figure class="gallery-item" data-category="matches">
                         <img src="https://www.google.com/maps/place/Rendezvous+Indoor+Stadium/@12.1226738,75.2081469,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipNwjpK5SvnsjPGrG8WHtdFW3UvZQ_fx_NxC6Ynu!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipNwjpK5SvnsjPGrG8WHtdFW3UvZQ_fx_NxC6Ynu%3Dw203-h360-k-no!7i1290!8i2293!4m9!3m8!1s0x3ba46c3032f1c4cd:0x55531281b9f39ae9!8m2!3d12.1227464!4d75.2082731!10e5!14m1!1BCgIgAQ!16s%2Fg%2F11f3rs5wcc?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D#" alt="Players competing in a badminton match" loading="lazy" />
                         <figcaption>National-level Match</figcaption>
                     </figure>
-                    <figure class="gallery-item">
+                    <figure class="gallery-item" data-category="training">
                         <img src="images/gallery2.jpg" alt="Group coaching session outdoors" loading="lazy" />
                         <figcaption>Group Training Session</figcaption>
                     </figure>
-                    <figure class="gallery-item">
+                    <figure class="gallery-item" data-category="events">
                         <img src="images/gallery3.jpg" alt="Trophy display in the academy" loading="lazy" />
                         <figcaption>Achievements & Trophies</figcaption>
                     </figure>
-                    <figure class="gallery-item">
+                    <figure class="gallery-item" data-category="training">
                         <img src="images/gallery4.jpg" alt="Coach instructing players" loading="lazy" />
                         <figcaption>Coaching in Action</figcaption>
                     </figure>
-                    <figure class="gallery-item">
+                    <figure class="gallery-item" data-category="matches">
                         <img src="images/gallery5.jpg" alt="Young kids playing badminton" loading="lazy" />
                         <figcaption>Youth Program</figcaption>
                     </figure>
-                    <figure class="gallery-item">
+                    <figure class="gallery-item" data-category="facilities">
                         <img src="images/gallery6.jpg" alt="Close-up of a badminton shuttlecock and racket" loading="lazy" />
                         <figcaption>Equipment & Gear</figcaption>
                     </figure>
-                    <!-- Add more gallery images to expand -->
+                    <figure class="gallery-item" data-category="facilities">
+                        <img src="images/gallery7.jpg" alt="Badminton court" loading="lazy" />
+                        <figcaption>Our Courts</figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="events">
+                        <img src="images/gallery8.jpg" alt="Award ceremony" loading="lazy" />
+                        <figcaption>Award Ceremony</figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="training">
+                        <img src="images/gallery9.jpg" alt="Fitness training" loading="lazy" />
+                        <figcaption>Fitness Training</figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image">
+            <div class="lightbox-caption"></div>
+            <button class="lightbox-close">&times;</button>
+            <button class="lightbox-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button class="lightbox-next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </div>
 
     <footer class="footer">
         <div class="container footer__container">
